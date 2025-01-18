@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <title>Escola DNC</title>
+</head>
+<body>
+
+<!--Menu Superior, com logo e afins-->
+    <div id="menusuperior">
+   <a href="https://www.escoladnc.com.br/"> <img src="./Imagens/logo.svg" id="logo" alt="Ops"> </a>
+    <h1 id="titulo-menusuperior">  Dê os primeiros passos <br> sua carreira em Tecnologia </h1>
+    <p id="texto-menusuperior"> Inscreva-se no curso gratuito de Introdução à <br> Tecnologia da DNC School e aprenda os principais <br> fundamentos para construir experiências efetivas. </p>
+</div>
+
+<!--Esse Menu é que fica em segunda plano com certificado, horas e afins-->
+<div id="menuinformacional">
+        <p class="textoinformativo"> <img src="./Icones/certificado.svg" class="Icones" id="certificado" alt=""> Certificado de conclusão </p>
+        <p class="textoinformativo"> <img src="./Icones/Relogio.svg" class="Icones" id="Relogio" alt=""> 4 horas de conteúdo </p>
+        <p class="textoinformativo"> <img src="./Icones/Camera.svg" class="Icones" id="Camera" alt=""> Aulas online gravadas </p>
+
+    </div>
+
+<!--Terceira seção do video-->
+<div id="secaovideo">
+<!--Aqui a gente consegue mexer na largura e na altura do vídeo-->
+    <iframe id="video" width="502" height="282" src="https://www.youtube.com/embed/ITxGkd9h4n4" title="DNC - A escola inovadora que forma profissionais de alta perfomance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div>
+
+<!--Esses texto é o que deve aparecer do lado do vídeo-->
+<h1 id="titulovideo"> Aprenda com especialistas <br>
+    comece seu primeiro projeto
+    </h1> <br> <br>
+
+<p id="textovideo"> Conheça o processo de desenvolvimento e entenda como utilizar <br>
+   os principais métodos e ferramentas da área para resolver <br>
+   problemas complexos.
+   <br><br>
+   
+   Conquiste seu certificado e desenvolva um projeto prático para <br>
+   aplicar seus conhecimentos. </p>
+</div>
+</div>
+
+<!--Carrossel da pagina-->
+<div id="carrossel">
+    <h1 id="TituloCarrossel"> Mais de 500 alunos já iniciaram seus estudos </h1>
+
+<!--Divisão dos Cards-->
+    <div id="div-cards">
+
+<!--Adicionar seta da esquerda e direita-->
+<!--Cards e depoimentos-->
+
+<img id="seta_esquerda" onclick="RolarParaEsquerda()" class="seta" src="/Icones/seta-esquerda.svg" alt="Esquedaa" srcset="">
+
+        <img id="Samantha" class="Card" src="./Cards/Samantha.svg" alt="Error" srcset="">
+        <img id= "Leonardo" class="Card" src="Cards/Leonardo.svg" alt="Error" srcset="">
+        <img id="Bruna" class="Card" src="Cards/Bruna.svg" alt="Error" srcset="">
+
+<!--Aqui eu estou chamando a função RolarParaDireita que criei lá no JS-->
+<img id="seta_direita" onclick="RolarParaDireita()" class="seta" src="./Icones/Seta-direita.svg" alt="Direita" srcset="">
+
+    </div>
+<!--No CSS para é possível utilizar o "cursor: pointer;" para fazer a MÃOZINHA do clicavel aparecer na seta, indicando que é um botão-->
+
+   
+
+</div>
+<!--Formulário-->
+<div id="formulario">
+    <h1 id="titulo-formulario"> Comece agora mesmo e dê o próximo passo da sua carreira </h1>
+<!--Nome da Tag qe consegue recepção de dados e capturar de dados "Inputs" -->
+<!--Tudo que eu colocar dentro dessa Tag FORM vai pertencer a esse formulário-->
+<!--A partir dessa tag form eu consigo criar um input e dizer que ele vai receber texto-->
+<!--Dentro do form eu criei um "ACTION" e identifiquei o link de uma planilha que está na minha conta do Sheet Monkey https://dashboard.sheetmonkey.io/edit/psQ2rcyhs4aBeivChnWPLq-->
+    <form action="https://api.sheetmonkey.io/form/psQ2rcyhs4aBeivChnWPLq" method="post">
+<!--placeholder é o elemento que segura o que vai estar escrito dentro do campo enquanto você não digita nada-->
+        <input type="text" placeholder="Nome ex: Dayene" name="Name" required > <br> <!--Se esse "REQUERED" não estiver preenchido ele não deixa o botão funcionar, obrigando o preenchimento.-->
+        <input type="email" placeholder="Email" name="Email" required> <br>
+        <input type="number" placeholder="Telefone" name="Telefone">    <br>
+
+<!--HIDDEN significa escondido > Esse input é responsável por colocar a data de input de cada informação na planilha-->
+        <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+       
+<!--Esse input é para que o botão entenda que ele tem uma função que é submeter os dados para a planilha-->
+    <button type="submit"> Acesse a ementa grátis </button>
+
+<!--Criar um botom para inputar as informações ex: <button> Acesse a ementa grátis </button> Linha 89-->   
+        
+
+        <!--padding é margem interna no CSS-->
+<!--Tudo que tem ":hover" na frente significa que eu vou dar um efeito para ele - linha 172-->
+    </form>
+
+</div>
+
+
+
+<script src="index.js"></script>
+
+</body>
+</html>
+
+
